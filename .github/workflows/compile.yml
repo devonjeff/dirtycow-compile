@@ -15,7 +15,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y gcc-arm-linux-gnueabi
 
     - name: Compile exploit for ARM
-      run: arm-linux-gnueabi-gcc -static exploit.c -o exploit_arm
+      run: arm-linux-gnueabi-gcc -static dirty.c -o dirty
 
     - name: Upload compiled binary
       uses: actions/upload-artifact@v4
